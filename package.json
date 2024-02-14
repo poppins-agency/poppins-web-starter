@@ -8,9 +8,14 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "pull-storyblok-components": "eval $(grep '^SB_SPACE_ID' .env) && storyblok pull-components --space $SB_SPACE_ID",
+    "generate-sb-types": "eval $(grep '^SB_SPACE_ID' .env) && storyblok-generate-ts source=./components.$SB_SPACE_ID.json target=./src/types/component-types-sb titlePrefix='' titleSuffix='SB' compilerOptions.unknownAny=true compilerOptions.additionalProperties=false  ",
+    "gen:update-sb": "npm run pull-storyblok-components && npm run generate-sb-types",
+    "analyzer": "ANALYZE=true npm run build"
   },
   "dependencies": {
+    "@next/bundle-analyzer": "^14.1.0",
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-slot": "^1.0.2",
