@@ -1,5 +1,5 @@
 "use client";
-import { Button } from "@/components/primitives/button";
+
 import { storyBlokComponents } from "@/lib/storyblok";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import { ReactNode } from "react";
