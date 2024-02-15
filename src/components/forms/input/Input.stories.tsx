@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Input } from "@/components/primitives/input";
+import { Input } from "@/components/forms/input";
 import { Label } from "../label";
 
 const meta: Meta<typeof Input> = {
