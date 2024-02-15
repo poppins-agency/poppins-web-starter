@@ -1,6 +1,6 @@
 "use client";
 
-import { storyBlokComponents } from "@/lib/storyblok";
+import { storyBlokComponents } from "@/utils/storyblok";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import { ReactNode } from "react";
 
