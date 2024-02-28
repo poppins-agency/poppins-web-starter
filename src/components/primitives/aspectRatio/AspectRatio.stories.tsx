@@ -1,12 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { StoryObj } from "@storybook/react";
 import { AspectRatio } from ".";
 import Image from "next/image";
 
-const meta: Meta<typeof AspectRatio> = {
-  component: AspectRatio,
+export default {
+  title: "Poppins Design System/Components/Primitives/AspectRatio",
+  parameters: {
+    component: AspectRatio,
+  },
 };
 
-export default meta;
 type Story = StoryObj<typeof AspectRatio>;
 
 export const Basic: Story = {

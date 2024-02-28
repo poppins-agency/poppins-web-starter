@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { StoryObj } from "@storybook/react";
 import {
   Select,
   SelectContent,
@@ -7,11 +7,13 @@ import {
   SelectValue,
 } from "@/components/primitives/select";
 
-const meta: Meta<typeof Select> = {
-  component: Select,
+export default {
+  title: "Poppins Design System/Components/Primitives/Select",
+  parameters: {
+    component: Select,
+  },
 };
 
-export default meta;
 type Story = StoryObj<typeof Select>;
 
 /*

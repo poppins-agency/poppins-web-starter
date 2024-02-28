@@ -1,11 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { StoryObj } from "@storybook/react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from ".";
 
-const meta: Meta<typeof Tabs> = {
-  component: Tabs,
+export default {
+  title: "Poppins Design System/Components/Primitives/Tabs",
+  parameters: {
+    component: Tabs,
+  },
 };
 
-export default meta;
 type Story = StoryObj<typeof Tabs>;
 
 export const Basic: Story = {

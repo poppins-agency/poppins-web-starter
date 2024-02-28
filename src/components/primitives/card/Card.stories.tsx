@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { StoryObj } from "@storybook/react";
 
 import {
   Card,
@@ -8,11 +8,14 @@ import {
   CardHeader,
   CardTitle,
 } from ".";
-const meta: Meta<typeof Card> = {
-  component: Card,
+
+export default {
+  title: "Poppins Design System/Components/Primitives/Card",
+  parameters: {
+    component: Card,
+  },
 };
 
-export default meta;
 type Story = StoryObj<typeof Card>;
 
 /*

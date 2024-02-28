@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { StoryObj } from "@storybook/react";
 import {
   Table,
   TableBody,
@@ -9,11 +9,13 @@ import {
   TableRow,
 } from ".";
 
-const meta: Meta<typeof Table> = {
-  component: Table,
+export default {
+  title: "Poppins Design System/Components/Primitives/Table",
+  parameters: {
+    component: Table,
+  },
 };
 
-export default meta;
 type Story = StoryObj<typeof Table>;
 
 export const Basic: Story = {

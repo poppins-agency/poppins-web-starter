@@ -1,11 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { StoryObj } from "@storybook/react";
 import { Textarea } from ".";
 
-const meta: Meta<typeof Textarea> = {
-  component: Textarea,
+export default {
+  title: "Poppins Design System/Components/Form Elements/Textarea",
+  parameters: {
+    component: Textarea,
+  },
 };
 
-export default meta;
 type Story = StoryObj<typeof Textarea>;
 
 export const Basic: Story = {

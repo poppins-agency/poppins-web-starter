@@ -1,11 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { StoryObj } from "@storybook/react";
 import { Label } from "@/components/forms/label";
 
-const meta: Meta<typeof Label> = {
-  component: Label,
+export default {
+  title: "Poppins Design System/Components/Form Elements/Label",
+  parameters: {
+    component: Label,
+  },
 };
 
-export default meta;
 type Story = StoryObj<typeof Label>;
 
 /*

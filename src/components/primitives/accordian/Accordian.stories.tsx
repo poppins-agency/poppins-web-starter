@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { StoryObj } from "@storybook/react";
 import {
   Accordion,
   AccordionItem,
@@ -6,11 +6,13 @@ import {
   AccordionContent,
 } from ".";
 
-const meta: Meta<typeof Accordion> = {
-  component: Accordion,
+export default {
+  title: "Poppins Design System/Components/Primitives/Accordion",
+  parameters: {
+    component: Accordion,
+  },
 };
 
-export default meta;
 type Story = StoryObj<typeof Accordion>;
 
 export const Basic: Story = {

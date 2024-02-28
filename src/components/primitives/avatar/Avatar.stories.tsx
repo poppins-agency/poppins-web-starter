@@ -1,11 +1,13 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { StoryObj } from "@storybook/react";
 import { Avatar, AvatarFallback, AvatarImage } from ".";
 
-const meta: Meta<typeof Avatar> = {
-  component: Avatar,
+export default {
+  title: "Poppins Design System/Components/Primitives/Avatar",
+  parameters: {
+    component: Avatar,
+  },
 };
 
-export default meta;
 type Story = StoryObj<typeof Avatar>;
 
 export const Basic: Story = {

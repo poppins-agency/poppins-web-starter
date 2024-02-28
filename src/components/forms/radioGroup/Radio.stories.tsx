@@ -1,12 +1,14 @@
-import type { Meta, StoryObj } from "@storybook/react";
+import type { StoryObj } from "@storybook/react";
 import { Label } from "@/components/forms/label";
 import { RadioGroup, RadioGroupItem } from ".";
 
-const meta: Meta<typeof RadioGroup> = {
-  component: RadioGroup,
+export default {
+  title: "Poppins Design System/Components/Form Elements/RadioGroup",
+  parameters: {
+    component: RadioGroup,
+  },
 };
 
-export default meta;
 type Story = StoryObj<typeof RadioGroup>;
 
 /*
