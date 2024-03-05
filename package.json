@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run ssl-dev & next dev",
+    "ssl-dev": "local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem",
     "build": "next build",
     "postbuild": "next-sitemap",
     "start": "next start",
@@ -14,7 +15,8 @@
     "pull-storyblok-components": "eval $(grep '^SB_SPACE_ID' .env) && storyblok pull-components --space $SB_SPACE_ID",
     "generate-sb-types": "eval $(grep '^SB_SPACE_ID' .env) && storyblok-generate-ts source=./components.$SB_SPACE_ID.json target=./src/types/component-types-sb titlePrefix='' titleSuffix='SB' compilerOptions.unknownAny=true compilerOptions.additionalProperties=false  ",
     "gen:update-sb": "npm run pull-storyblok-components && npm run generate-sb-types",
-    "analyzer": "ANALYZE=true npm run build"
+    "analyzer": "ANALYZE=true npm run build",
+    "chromatic": "npx chromatic"
   },
   "dependencies": {
     "@next/bundle-analyzer": "^14.1.0",
@@ -68,7 +70,8 @@
     "eslint-plugin-storybook": "^0.6.15",
     "lint-staged": "^15.2.2",
     "postcss": "^8",
-    "storybook": "^6.5.16",
+    "storyblok-generate-ts": "^2.0.2",
+    "storybook": "^7.6.17",
     "tailwindcss": "^3.3.0",
     "tsconfig-paths-webpack-plugin": "^4.1.0",
     "typescript": "^5"
