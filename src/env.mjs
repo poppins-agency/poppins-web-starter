@@ -8,6 +8,7 @@ export const env = createEnv({
    */
   server: {
     NODE_ENV: z.enum(["development", "test", "production"]),
+    SB_SPACE_ID: z.string().min(1),
   },
 
   /**
@@ -25,6 +26,7 @@ export const env = createEnv({
    * middlewares) or client-side so we need to destruct manually.
    */
   runtimeEnv: {
+    SB_SPACE_ID: process.env.SB_SPACE_ID,
     NODE_ENV: process.env.NODE_ENV,
     NEXT_PUBLIC_STORYBLOK_API_TOKEN:
       process.env.NEXT_PUBLIC_STORYBLOK_API_TOKEN,

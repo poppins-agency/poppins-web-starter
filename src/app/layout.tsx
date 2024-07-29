@@ -5,7 +5,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import StoryblokProvider from "@/providers/storyblokProvider";
-import { storyBlokComponents } from "@/utils/storyblok";
+import { storyblokComponents } from "@/utils/storyblokComponents";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
 storyblokInit({
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_API_TOKEN,
   use: [apiPlugin],
-  components: storyBlokComponents,
+  components: storyblokComponents,
 });
 
 export default function RootLayout({
@@ -26,13 +26,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <StoryblokProvider>
+    <StoryblokProvider>
+      <html lang="en">
         <body className={inter.className}>
           {children}
           <Analytics mode="production" />
         </body>
-      </StoryblokProvider>
-    </html>
+      </html>
+    </StoryblokProvider>
   );
 }

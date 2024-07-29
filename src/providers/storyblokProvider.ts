@@ -1,13 +1,13 @@
 "use client";
 
-import { storyBlokComponents } from "@/utils/storyblok";
+import { storyblokComponents } from "@/utils/storyblokComponents";
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import { ReactNode } from "react";
 
 storyblokInit({
   accessToken: process.env.NEXT_PUBLIC_STORYBLOK_API_TOKEN,
   use: [apiPlugin],
-  components: storyBlokComponents,
+  components: storyblokComponents,
 });
 
 export default function StoryblokProvider({

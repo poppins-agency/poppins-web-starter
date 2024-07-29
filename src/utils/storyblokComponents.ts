@@ -1,5 +1,5 @@
 import { Button } from "@/components/primitives/button";
 
-export const storyBlokComponents = {
+export const storyblokComponents = {
   Button: Button,
 };
