@@ -1,16 +1,23 @@
-
 import { useEffect, useState } from "react";
 
+type WindowSize = {
+  width: number;
+  height: number;
+  mobile: boolean;
+  tablet: boolean;
+  desktop: boolean;
+};
+
 const useWindowSize = () => {
-  const [windowSize, setWindowSize] = useState({ width: 0, height: 0, mobile: true ,tablet: false, desktop: false });
+  const [windowSize, setWindowSize] = useState({} as WindowSize);
 
   const handleSize = () => {
     setWindowSize({
       width: window.innerWidth,
       height: window.innerHeight,
       mobile: window.innerWidth < 600,
-      tablet: window.innerWidth < 960 && window.innerWidth >= 600,
-      desktop: window.innerWidth > 960
+      tablet: window.innerWidth < 1080 && window.innerWidth >= 600,
+      desktop: window.innerWidth > 1080,
     });
   };
 
