@@ -15,8 +15,8 @@ const useWindowSize = () => {
     setWindowSize({
       width: window.innerWidth,
       height: window.innerHeight,
-      mobile: window.innerWidth < 600,
-      tablet: window.innerWidth < 1080 && window.innerWidth >= 600,
+      mobile: window.innerWidth < 640,
+      tablet: window.innerWidth < 1080 && window.innerWidth >= 640,
       desktop: window.innerWidth > 1080,
     });
   };
