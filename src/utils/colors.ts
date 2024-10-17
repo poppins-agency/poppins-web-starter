@@ -7,13 +7,12 @@ export const primary = theme?.colors?.primary;
 export const secondary = theme?.colors?.secondary;
 export const tertiary = theme?.colors?.tertiary;
 
-export type ColorStrings = "primary" | "secondary" | "tertiary";
+export type ColorStrings = "primary-500" | "secondary-500" | "tertiary-500";
 
 export const getBorderColor = (color: ColorStrings) => {
-  switch (color) {
-    case "primary":
-      return `border-primary-500`;
-    default:
-      return "";
-  }
+  return `border-${color}`;
+};
+
+export const getBGColor = (color: ColorStrings) => {
+  return `border-${color}`;
 };
